@@ -29,11 +29,10 @@ resource "aws_instance" "dovetest-instance" {
     private_key = file("dovekey")
     host        = self.public_ip
   }
- 
 }
 output "PublicIP" {
-    value = aws_instance.dovetest-instance.public_ip
-  }
-output "PrivateIP"{
-    value=aws_instance.dovetest-instance.private_ip
-  }
+  value = aws_instance.dovetest-instance.public_ip
+}
+output "PrivateIP" {
+  value = aws_instance.dovetest-instance.private_ip
+}
